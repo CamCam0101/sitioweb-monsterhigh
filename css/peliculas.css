@@ -1,3 +1,10 @@
+:root{
+    --rosa-brillante: #ff007f;
+  --morado-oscuro: #511a7e;
+  --azul-neon: #41e6ff;
+  --blanco: #ffffff;
+}
+
 body{
     background-image: url(../Fondos/chicas.jpg);
     background-size: 50%;
@@ -9,8 +16,8 @@ body{
     max-width: 800px;
     width: 95%;
     margin: 60px auto;
-    background-color: rgb(65, 230, 255);
-    border: 1px;
+    background-color: rgba(42, 8, 96, 0.4);
+    border: 3px dashed var(--rosa-brillante);
     border-radius: 10px;
     gap: 20px;
     padding: 30px;
@@ -22,6 +29,7 @@ body{
     padding: 3px 10px 10px 30px;
     background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
     background-size: 200%;
+    border: 3px dashed var(--rosa-brillante);
     border-radius: 10px;
     h2{
     color: rgb(255, 255, 255);
@@ -50,7 +58,13 @@ body{
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
-    border: 7px solid #ff007f;
+    border: 5px solid #ff007f;
+    border-radius: 10px;
+}
+
+.imagen-lat:hover{
+   transform: translateY(-5px);
+   border-color: var(--azul-neon);
 }
 
 .contenido-texto{
@@ -60,6 +74,7 @@ body{
     padding: 5px 10px 30px 30px;
     background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
     background-size: 200%;
+    border: 3px dashed var(--rosa-brillante);
     border-radius: 10px;
     h2{
     color: rgb(255, 255, 255);
@@ -68,7 +83,7 @@ body{
     min-width: 200px;
     }
     p{
-    color: #ff007f;
+    color: var(--azul-neon);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     flex: 1;
     min-width: 250px;
