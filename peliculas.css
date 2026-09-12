@@ -1,7 +1,6 @@
 body{
-    background-image: url(Fondos/fondo-peliculas.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
+    background-image: url(Fondos/chicas.jpg);
+    
     background-attachment: fixed;
 }
 .fondo{
