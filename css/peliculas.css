@@ -1,0 +1,92 @@
+:root{
+    --rosa-brillante: #ff007f;
+  --morado-oscuro: #511a7e;
+  --azul-neon: #41e6ff;
+  --blanco: #ffffff;
+}
+
+body{
+    background-image: url(../Fondos/chicas.jpg);
+    background-size: 50%;
+    background-attachment: fixed;
+}
+.fondo{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 95%;
+    margin: 60px auto;
+    background-color: rgba(42, 8, 96, 0.4);
+    border: 3px dashed var(--rosa-brillante);
+    border-radius: 10px;
+    gap: 20px;
+    padding: 30px;
+}
+.informacion{
+    text-align:left;
+    flex: 1;
+    margin-right: 30px;
+    padding: 3px 10px 10px 30px;
+    background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+    background-size: 200%;
+    border: 3px dashed var(--rosa-brillante);
+    border-radius: 10px;
+    h2{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    }
+    p{
+    color: #ff007f;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1;
+    min-width: 250px;
+    }
+}
+.imagenes-pelicula{
+    display: flex;
+    grid-template-columns: 100px auto 1fr;
+
+    padding: 15px 0;
+    margin: auto;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.imagen-lat{
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 5px solid #ff007f;
+    border-radius: 10px;
+}
+
+.imagen-lat:hover{
+   transform: translateY(-5px);
+   border-color: var(--azul-neon);
+}
+
+.contenido-texto{
+    text-align:left;
+    flex: 1;
+    margin: 10px;
+    padding: 5px 10px 30px 30px;
+    background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+    background-size: 200%;
+    border: 3px dashed var(--rosa-brillante);
+    border-radius: 10px;
+    h2{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1;
+    min-width: 200px;
+    }
+    p{
+    color: var(--azul-neon);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1;
+    min-width: 250px;
+    }
+    
+}

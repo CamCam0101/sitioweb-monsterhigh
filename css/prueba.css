@@ -1,0 +1,203 @@
+/* VARIABLES DE COLOR */
+:root {
+  --rosa-brillante: #ff007f;
+  --morado-oscuro: #511a7e;
+  --negro-fondo: #111111;
+  --azul-neon: #41e6ff;
+  --blanco: #ffffff;
+}
+
+/* ESTILOS GENERALES */
+body {
+  margin: 0;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-image:url(../Fondos/calavera.jpg) ;
+  background-size:cover;
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--blanco);
+}
+
+/* ENCABEZADO (HEADER) */
+.header-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(45deg, var(--morado-oscuro), #000000);
+  border-bottom: 4px solid var(--rosa-brillante);
+  text-align: center;
+  padding: 5px 20px;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.imagen-logo {
+  max-width: 700px;
+  width: 85%;
+  height: auto;
+  margin-top: -100px;
+  margin-bottom: 0px;
+  display: inline-block;
+}
+
+.eslogan {
+  margin: -30px 0 0 0;
+  font-style: italic;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+.menu-navegacion {
+  background-color: var(--rosa-brillante);
+  text-align: center;
+  padding: 10px;
+}
+
+.enlace-menu {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.enlace-menu:hover {
+  color: var(--azul-neon);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-principal {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* SECCIÓN DE BIENVENIDA */
+.seccion-bienvenida {
+  border: 3px dashed var(--rosa-brillante);
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: rgba(42, 8, 69, 0.4);
+  text-align: center;
+}
+.marco-fondo{
+  border: 3px dashed var(--rosa-brillante);
+  padding: 30px 20px;
+  background-color: rgba(42, 8, 69, 0.4);
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.titulo-seccion {
+  border-left: 5px solid var(--azul-neon);
+  padding-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--rosa-brillante);
+}
+
+/* REJILLA DE ESTUDIANTES (GRID) */
+.rejilla-estudiantes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* TARJETA DE CADA MONSTRUO */
+.tarjeta-monstruo {
+  background-color: #1a1a1a;
+  border: 2px solid var(--morado-oscuro);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Contiene la insignia absoluta */
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta-monstruo:hover {
+  transform: translateY(-5px);
+  border-color: var(--azul-neon);
+}
+
+/* Estilos nuevos para controlar el tamaño de las imágenes */
+.contenedor-imagen-monstruo {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.imagen-personaje {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Evita que la foto se deforme o estire */
+}
+
+.nombre-monstruo {
+  color: var(--rosa-brillante);
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.info-monstruo {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+/* INSIGNIA EN LA ESQUINA */
+.insignia-esquina {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--azul-neon);
+  color: var(--negro-fondo);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  z-index: 10; /* Se asegura de quedar por encima de la foto */
+}
+
+/* SECCIÓN DE CLASES (Diseño de lista moderna) */
+.lista-clases {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tarjeta-clase {
+  background-color: #151515;
+  border-left: 4px solid var(--rosa-brillante);
+  padding: 15px 20px;
+  border-radius: 0 10px 10px 0;
+}
+
+.nombre-clase {
+  margin: 0 0 5px 0;
+  color: var(--azul-neon);
+  font-size: 1.2rem;
+}
+
+.detalle-clase {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+  text-align: center;
+  padding: 20px;
+  background-color: #050505;
+  border-top: 2px solid var(--morado-oscuro);
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 50px;
+}
