@@ -1,10 +1,10 @@
-.encabezado-fijo{
+.encabezado-fijo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 60px;
-    background-color:var(--rosa-brillante);
+    background-color: var(--rosa-brillante);
     display: flex;
     justify-content: space-between;
     gap: 50px;
@@ -13,13 +13,13 @@
     z-index: 1000;
 }
 
-.logo img{
+.logo img {
     height: 60px;
     width: auto;
     display: block;
 }
 
-.menu{
+.menu {
     display: flex;
     gap: 60px;
     position: absolute;
@@ -27,15 +27,15 @@
     transform: translateX(-50%);
 }
 
-.enlace{
+.enlace {
     color: white;
     text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.enlace:hover{
+.enlace:hover {
     color: rgb(48, 227, 255);
 }

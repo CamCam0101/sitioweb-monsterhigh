@@ -1,84 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monster High - El Laboratorio de Moda Retro</title>
-  
-  <!-- Conexión al archivo CSS externo -->
-  <link rel="stylesheet" href="fashion.css">
-  <link rel="stylesheet" href="css/menu_nav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster High - El Laboratorio de Moda Retro</title>
+
+    <!-- Conexión al archivo CSS externo -->
+    <link rel="stylesheet" href="css/fashion.css">
 </head>
+
 <body>
 
-  <!-- Elemento Decorativo: Matraz de Laboratorio en la esquina de la pantalla -->
-  <div class="decoracion-matraz">🧪</div>
+    <!-- Elemento Decorativo: Matraz de Laboratorio en la esquina de la pantalla -->
+    <div class="decoracion-matraz">🧪</div>
 
-  <!-- Encabezado Estilo Y2K Grunge -->
-  <header class="header-retro">
-    <div class="contenedor-cabecera">
-      <span class="calavera-decorativa">💀</span>
-      <h1 class="titulo-juego">FASHION LAB</h1>
-      <span class="calavera-decorativa">💀</span>
-    </div>
-    <p class="subtitulo-juego">¡Crea tu defecto perfecto de la moda!</p>
-  </header>
+    <!-- Encabezado unificado de la Escuela -->
+    <header class="header-principal">
+        <img src="https://wikimedia.org" alt="Monster High Logo" class="logo-centro">
+        <p class="eslogan">¡Luce outfits tan glamouurosos que están para morirse!</p>
+    </header>
 
-  <!-- Contenedor Principal (Gran Marco con textura) -->
-  <main class="marco-pantalla-juego">
-    
-    <div class="interfaz-closet">
-      
-      <!-- LÓGICA DE CONTROLADORES: Inputs ocultos para alternar la ropa -->
-      <input type="radio" name="outfit-monster" id="outfit-original" checked>
-      <input type="radio" name="outfit-monster" id="outfit-haunted">
-      <input type="radio" name="outfit-monster" id="outfit-scarier">
+    <!-- Contenedor Principal (Gran Marco con textura) -->
+    <main class="marco-pantalla-juego">
 
-      <!-- MENÚ DE ATAÚD (Panel Izquierdo Interactivo) -->
-      <!-- Usamos combinaciones de clases y etiquetas semánticas -->
-      <nav class="menu-ataud-izquierda">
-        <h3 class="titulo-perchero">PRENDAS</h3>
-        
-        <!-- Los labels se vinculan por ID y actúan como los botones Flash -->
-        <label for="outfit-original" class="boton-skull-vibe">
-          <span class="viñeta-moño">🎀</span> Básico Glam
-        </label>
-        
-        <label for="outfit-haunted" class="boton-skull-vibe">
-          <span class="viñeta-moño">🎀</span> Haunted Look
-        </label>
-        
-        <label for="outfit-scarier" class="boton-skull-vibe">
-          <span class="viñeta-moño">🎀</span> Scarrier Reef
-        </label>
-      </nav>
+        <div class="interfaz-closet grupo-drac">
 
-      <!-- ÁREA DEL MANIQUÍ (Caja Central de Visualización) -->
-      <section class="pantalla-maniqui">
-        
-        <!-- Cuerpo de la muñeca (Capa Base estática) -->
-        <img src="https://unsplash.com" alt="Muñeca Base" class="capa-textura cuerpo-maniqui">
-        
-        <!-- Prendas que reaccionan al hacer clic en los botones -->
-        <img src="https://unsplash.com" alt="Estilo Básico" class="capa-textura prenda-basica">
-        <img src="https://unsplash.com" alt="Estilo Haunted" class="capa-textura prenda-haunted">
-        <img src="https://unsplash.com" alt="Estilo Scarrier" class="capa-textura prenda-scarrier">
-        
-      </section>
+            <!-- LÓGICA DE CONTROLADORES: Inputs ocultos para alternar la ropa -->
+            <input type="radio" name="outfit-draculaura" id="outfit1" checked>
+            <input type="radio" name="outfit-draculaura" id="outfit2">
+            <input type="radio" name="outfit-draculaura" id="outfit3">
+            <input type="radio" name="outfit-draculaura" id="outfit4">
 
-      <!-- PANEL DE NOTAS / DETALLES (Estilo bitácora científica de la derecha) -->
-      <aside class="panel-bitacora-derecha">
-        <h4 class="titulo-nota">Monster Diario</h4>
-        <p class="texto-nota">Intercambia los estilos usando el panel de ataúd izquierdo. ¡No olvides combinar tus accesorios horroríficos!</p>
-      </aside>
+            <!-- 1. ÁREA DE LA MUÑECA (Flotando libre a la izquierda, sin cajas de maniquí) -->
+            <section class="display-muñeca">
+                <div class="efecto-destello-click"></div>
+                <!-- Capas de prendas que reaccionan al hacer clic -->
+                <img src="png_s/d1.png" alt="Estilo Básico" class="capa-personaje prenda1">
+                <img src="png_s/d2.png" alt="Estilo Haunted" class="capa-personaje prenda2">
+                <img src="png_s/d3.png" alt="Estilo Scarrier" class="capa-personaje prenda3">
+                <img src="png_s/d4.png" alt="Estilo Gloom" class="capa-personaje prenda4">
+            </section>
 
-    </div>
+            <!-- 2. COLUMNA CENTRAL DE CONTENIDO -->
+            <div class="bloque-central-informacion">
 
-  </main>
+                <!-- El perchero central organiza los botones con los moñitos -->
+                <nav class="perchero-central">
+                    <h3 class="titulo-perchero">SELECCIONA TU LOOK</h3>
+                    <div class="rejilla-botones-horizontales">
 
-  <footer class="pie-retro">
-    <p>&copy; 2000-2012 Monster High Web - Sección Recuperada (Lost Media Vibe)</p>
-  </footer>
+                        <label for="outfit1" class="boton-skull" id="btn1">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Básico Glam</span>
+                        </label>
+
+                        <label for="outfit2" class="boton-skull" id="btn2">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Haunted Look</span>
+                        </label>
+
+                        <label for="outfit3" class="boton-skull" id="btn3">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Scarrier Reef</span>
+                        </label>
+
+                        <label for="outfit4" class="boton-skull" id="btn4">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Gloom Beach</span>
+                        </label>
+
+                    </div>
+                </nav>
+
+                <!-- Bloques de información estilo diario gótico -->
+                <article class="caja-diario-gotica">
+                    <h4 class="etiqueta-rosa">KILLER STYLE</h4>
+                    <p class="texto-diario">Me encanta combinar modas de ambos lados de mi herencia monstruosa. ¡Luce un
+                        estilo electrizante y fashion mientras exploras el instituto!</p>
+                </article>
+
+                <article class="caja-diario-gotica">
+                    <h4 class="etiqueta-rosa">MONSTER DIARIO</h4>
+                    <p class="texto-diario">Intercambia los estilos usando los botones superiores del clóset. Cada
+                        outfit revela una energía mística diferente en el laboratorio.</p>
+                </article>
+
+            </div> <!-- Fin bloque central -->
+
+        </div>
+
+        <div class="divisor"></div>
+
+        <div class="interfaz-closet grupo-clawdeen">
+
+            <!-- LÓGICA DE CONTROLADORES: Inputs ocultos para alternar la ropa -->
+            <input type="radio" name="outfit-clawdeen" id="clawdeen1" checked>
+            <input type="radio" name="outfit-clawdeen" id="clawdeen2">
+            <input type="radio" name="outfit-clawdeen" id="clawdeen3">
+            <input type="radio" name="outfit-clawdeen" id="clawdeen4">
+
+            <!-- 1. ÁREA DE LA MUÑECA (Flotando libre a la izquierda, sin cajas de maniquí) -->
+            <section class="display-muñeca">
+                <div class="efecto-destello-click"></div>
+                <!-- Capas de prendas que reaccionan al hacer clic -->
+                <img src="png_s/c1.png" alt="Estilo Básico" class="capa-personaje prenda1">
+                <img src="png_s/c2.png" alt="Estilo Haunted" class="capa-personaje prenda2">
+                <img src="png_s/c3.png" alt="Estilo Scarrier" class="capa-personaje prenda3">
+                <img src="png_s/c4.png" alt="Estilo Gloom" class="capa-personaje prenda4">
+            </section>
+
+            <!-- 2. COLUMNA CENTRAL DE CONTENIDO -->
+            <div class="bloque-central-informacion">
+
+                <!-- El perchero central organiza los botones con los moñitos -->
+                <nav class="perchero-central">
+                    <h3 class="titulo-perchero">SELECCIONA TU LOOK</h3>
+                    <div class="rejilla-botones-horizontales">
+
+                        <label for="clawdeen1" class="boton-skull" id="btn1">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Básico Glam</span>
+                        </label>
+
+                        <label for="clawdeen2" class="boton-skull" id="btn2">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Haunted Look</span>
+                        </label>
+
+                        <label for="clawdeen3" class="boton-skull" id="btn3">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Scarrier Reef</span>
+                        </label>
+
+                        <label for="clawdeen4" class="boton-skull" id="btn4">
+                            <span class="viñeta-moño">🎀</span> <span class="texto-boton">Gloom Beach</span>
+                        </label>
+
+                    </div>
+                </nav>
+
+                <!-- Bloques de información estilo diario gótico -->
+                <article class="caja-diario-gotica">
+                    <h4 class="etiqueta-rosa">CLAWDEEN STYLE</h4>
+                    <p class="texto-diario">Me encanta combinar modas de ambos lados de mi herencia monstruosa. ¡Luce un
+                        estilo electrizante y fashion mientras exploras el instituto!</p>
+                </article>
+
+                <article class="caja-diario-gotica">
+                    <h4 class="etiqueta-rosa">MONSTER DIARIO</h4>
+                    <p class="texto-diario">Intercambia los estilos usando los botones superiores del clóset. Cada
+                        outfit revela una energía mística diferente en el laboratorio.</p>
+                </article>
+
+            </div> <!-- Fin bloque central -->
+
+        </div>
+
+    </main>
+
+    <footer class="pie-retro">
+        <p>&copy; 2000-2012 Monster High Web - Sección Recuperada (Lost Media Vibe)</p>
+    </footer>
 
 </body>
+
 </html>
