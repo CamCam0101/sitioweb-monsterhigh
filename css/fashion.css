@@ -21,7 +21,7 @@ body {
 /* MATRAZ FLOATING */
 .decoracion-matraz {
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 30px;
     font-size: 3.5rem;
     filter: drop-shadow(0 0 15px var(--blanco));
