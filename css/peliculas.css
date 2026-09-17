@@ -46,7 +46,6 @@ body{
 .imagenes-pelicula{
     display: flex;
     grid-template-columns: 100px auto 1fr;
-
     padding: 15px 0;
     margin: auto;
     width: 100%;

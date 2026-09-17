@@ -1,7 +1,7 @@
 /* PALETA DE COLORES OFICIALES Y2K */
 :root {
     --rosa-brillante: #ff007f;
-    --morado-gótico: #531c80;
+    --morado-gótico: #7a35b2;
     --azul-haunted: #00d2ff;
     --blanco: #ffff;
     --negro-grunge: #0d0d0d;
@@ -21,12 +21,16 @@ body {
 /* MATRAZ FLOATING */
 .decoracion-matraz {
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 30px;
-    font-size: 3.5rem;
     filter: drop-shadow(0 0 15px var(--blanco));
     animation: flotar 3s ease-in-out infinite;
     z-index: 10;
+}
+
+.decoracion-matraz img{
+    width: 250px;
+    height: auto;
 }
 
 /* ENCABEZADO UNIFICADO COMPACTO */
@@ -92,7 +96,7 @@ input[type="radio"] {
     box-shadow: none;
     overflow: visible;
     flex-shrink: 0;
-    margin-left: -30px;
+    margin-left: -70px;
     /* Desborde hacia la izquierda fuera del recuadro */
 }
 
@@ -180,252 +184,101 @@ input[type="radio"] {
 
 /*LÓGICA E INDICADORES DE ACTIVACIÓN (:checked)
 =*/
-/*1. ILUMINACIÓN DE BOTONES AL ESTAR ACTIVOS (:checked)
-=*/
+/* ===================================================
+   1. ILUMINACIÓN INDEPENDIENTE DE BOTONES SKULL
+====================================================== */
 
-/* --- DRACULAURA: Iluminación de botones (.grupo-drac) --- */
-#outfit1:checked~.bloque-central-informacion #btn1 {
-    background-color: var(--morado-gótico);
-    border-color: var(--rosa-brillante);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+/* --- Iluminación Botón 1 (Básico) --- */
+#drac1:checked ~ .bloque-central-informacion #btn-drac1, #claw1:checked ~ .bloque-central-informacion #btn-claw1,
+#frank1:checked ~ .bloque-central-informacion #btn-frank1, #cleo1:checked ~ .bloque-central-informacion #btn-cleo1 { 
+  background-color: var(--morado-gótico); border-color: var(--rosa-brillante); color: #ffffff; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); 
 }
 
-#outfit1:checked~.bloque-central-informacion #btn1 .viñeta-moño {
-    filter: grayscale(0%);
+/* --- Iluminación Botón 2 (Haunted) --- */
+#drac2:checked ~ .bloque-central-informacion #btn-drac2, #claw2:checked ~ .bloque-central-informacion #btn-claw2,
+#frank2:checked ~ .bloque-central-informacion #btn-frank2, #cleo2:checked ~ .bloque-central-informacion #btn-cleo2 { 
+  background-color: #002b36; border-color: var(--azul-haunted); color: #ffffff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.4); 
 }
 
-#outfit2:checked~.bloque-central-informacion #btn2 {
-    background-color: #002b36;
-    border-color: var(--azul-haunted);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+/* --- Iluminación Botón 3 (Scarrier) --- */
+#drac3:checked ~ .bloque-central-informacion #btn-drac3, #claw3:checked ~ .bloque-central-informacion #btn-claw3,
+#frank3:checked ~ .bloque-central-informacion #btn-frank3, #cleo3:checked ~ .bloque-central-informacion #btn-cleo3 { 
+  background-color: #0d2600; border-color: var(--blanco); color: #ffffff; box-shadow: 0 0 10px rgba(57, 255, 20, 0.4); 
 }
 
-#outfit2:checked~.bloque-central-informacion #btn2 .viñeta-moño {
-    filter: grayscale(0%);
+/* --- Iluminación Botón 4 (Gloom) --- */
+#drac4:checked ~ .bloque-central-informacion #btn-drac4, #claw4:checked ~ .bloque-central-informacion #btn-claw4,
+#frank4:checked ~ .bloque-central-informacion #btn-frank4, #cleo4:checked ~ .bloque-central-informacion #btn-cleo4 { 
+  background-color: #450826; border-color: var(--rosa-brillante); color: #ffffff; box-shadow: 0 0 10px rgba(255, 0, 127, 0.4); 
 }
 
-#outfit3:checked~.bloque-central-informacion #btn3 {
-    background-color: #0d2600;
-    border-color: var(--blanco);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
-}
-
-#outfit3:checked~.bloque-central-informacion #btn3 .viñeta-moño {
-    filter: grayscale(0%);
-}
-
-#outfit4:checked~.bloque-central-informacion #btn4 {
-    background-color: #450826;
-    border-color: var(--rosa-brillante);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
-}
-
-#outfit4:checked~.bloque-central-informacion #btn4 .viñeta-moño {
-    filter: grayscale(0%);
+/* Encender el color rosa del moño en los botones activos */
+input[type="radio"]:checked ~ .bloque-central-informacion .boton-skull .viñeta-moño { 
+  filter: grayscale(0%); 
 }
 
 
-/* --- CLAWDEEN: Iluminación de botones (.grupo-clawdeen) --- */
-#clawdeen1:checked~.bloque-central-informacion #btn1 {
-    background-color: var(--morado-gótico);
-    border-color: var(--rosa-brillante);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
-}
-
-#clawdeen1:checked~.bloque-central-informacion #btn1 .viñeta-moño {
-    filter: grayscale(0%);
-}
-
-#clawdeen2:checked~.bloque-central-informacion #btn2 {
-    background-color: #002b36;
-    border-color: var(--azul-haunted);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
-}
-
-#clawdeen2:checked~.bloque-central-informacion #btn2 .viñeta-moño {
-    filter: grayscale(0%);
-}
-
-#clawdeen3:checked~.bloque-central-informacion #btn3 {
-    background-color: #0d2600;
-    border-color: var(--blanco);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
-}
-
-#clawdeen3:checked~.bloque-central-informacion #btn3 .viñeta-moño {
-    filter: grayscale(0%);
-}
-
-#clawdeen4:checked~.bloque-central-informacion #btn4 {
-    background-color: #450826;
-    border-color: var(--rosa-brillante);
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
-}
-
-#clawdeen4:checked~.bloque-central-informacion #btn4 .viñeta-moño {
-    filter: grayscale(0%);
-}
-
-
-/*2. ACTIVACIÓN AISLADA DE PRENDAS POR GRUPOS (MÉTODO POR DEFECTO)
-=*/
+/* ===================================================
+   2. CONTROL DE PRENDAS AISLADAS POR CADA MONSTRUO
+====================================================== */
 
 /* --- DRACULAURA (.grupo-drac) --- */
-/* Si el primer botón está seleccionado, mostramos la prenda 1 */
-.grupo-drac #outfit1:checked~.display-muñeca>.prenda1 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--rosa-brillante));
-}
-
-/* Si CUALQUIERA de los otros botones (2, 3 o 4) se selecciona, ocultamos la prenda 1 de inmediato */
-.grupo-drac #outfit2:checked~.display-muñeca>.prenda1,
-.grupo-drac #outfit3:checked~.display-muñeca>.prenda1,
-.grupo-drac #outfit4:checked~.display-muñeca>.prenda1 {
-    opacity: 0;
-}
-
-/* Activación normal para los outfits 2, 3 y 4 */
-.grupo-drac #outfit2:checked~.display-muñeca>.prenda2 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--azul-haunted));
-}
-
-.grupo-drac #outfit3:checked~.display-muñeca>.prenda3 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--morado-gótico));
-}
-
-.grupo-drac #outfit4:checked~.display-muñeca>.prenda4 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--rosa-brillante));
-}
-
+.grupo-drac input[type="radio"]:checked ~ .display-muñeca > .prenda1 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
+.grupo-drac #drac2:checked ~ .display-muñeca > .prenda1, .grupo-drac #drac3:checked ~ .display-muñeca > .prenda1, .grupo-drac #drac4:checked ~ .display-muñeca > .prenda1 { opacity: 0; }
+.grupo-drac #drac2:checked ~ .display-muñeca > .prenda2 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--azul-haunted)); }
+.grupo-drac #drac3:checked ~ .display-muñeca > .prenda3 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px #e76fbb); }
+.grupo-drac #drac4:checked ~ .display-muñeca > .prenda4 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
 
 /* --- CLAWDEEN (.grupo-clawdeen) --- */
-/* Si el primer botón está seleccionado, mostramos la prenda 1 */
-.grupo-clawdeen #clawdeen1:checked~.display-muñeca>.prenda1 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--rosa-brillante));
-}
+.grupo-clawdeen input[type="radio"]:checked ~ .display-muñeca > .prenda1 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
+.grupo-clawdeen #claw2:checked ~ .display-muñeca > .prenda1, .grupo-clawdeen #claw3:checked ~ .display-muñeca > .prenda1, .grupo-clawdeen #claw4:checked ~ .display-muñeca > .prenda1 { opacity: 0; }
+.grupo-clawdeen #claw2:checked ~ .display-muñeca > .prenda2 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--azul-haunted)); }
+.grupo-clawdeen #claw3:checked ~ .display-muñeca > .prenda3 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px #9b2bdd); }
+.grupo-clawdeen #claw4:checked ~ .display-muñeca > .prenda4 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
 
-/* Si CUALQUIERA de los otros botones (2, 3 o 4) se selecciona, ocultamos la prenda 1 de Clawdeen */
-.grupo-clawdeen #clawdeen2:checked~.display-muñeca>.prenda1,
-.grupo-clawdeen #clawdeen3:checked~.display-muñeca>.prenda1,
-.grupo-clawdeen #clawdeen4:checked~.display-muñeca>.prenda1 {
-    opacity: 0;
-}
+/* --- FRANKIE (.grupo-frankie) --- */
+.grupo-frankie input[type="radio"]:checked ~ .display-muñeca > .prenda1 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
+.grupo-frankie #frank2:checked ~ .display-muñeca > .prenda1, .grupo-frankie #frank3:checked ~ .display-muñeca > .prenda1, .grupo-frankie #frank4:checked ~ .display-muñeca > .prenda1 { opacity: 0; }
+.grupo-frankie #frank2:checked ~ .display-muñeca > .prenda2 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--azul-haunted)); }
+.grupo-frankie #frank3:checked ~ .display-muñeca > .prenda3 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px #04c127); }
+.grupo-frankie #frank4:checked ~ .display-muñeca > .prenda4 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
 
-/* Activación normal para los outfits 2, 3 y 4 de Clawdeen */
-.grupo-clawdeen #clawdeen2:checked~.display-muñeca>.prenda2 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--azul-haunted));
-}
-
-.grupo-clawdeen #clawdeen3:checked~.display-muñeca>.prenda3 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--morado-gótico));
-}
-
-.grupo-clawdeen #clawdeen4:checked~.display-muñeca>.prenda4 {
-    opacity: 1;
-    z-index: 10;
-    filter: drop-shadow(0 0 12px var(--rosa-brillante));
-}
+/* --- CLEO DE NILE (.grupo-cleo) --- */
+.grupo-cleo input[type="radio"]:checked ~ .display-muñeca > .prenda1 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
+.grupo-cleo #cleo2:checked ~ .display-muñeca > .prenda1, .grupo-cleo #cleo3:checked ~ .display-muñeca > .prenda1, .grupo-cleo #cleo4:checked ~ .display-muñeca > .prenda1 { opacity: 0; }
+.grupo-cleo #cleo2:checked ~ .display-muñeca > .prenda2 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--azul-haunted)); }
+.grupo-cleo #cleo3:checked ~ .display-muñeca > .prenda3 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px #ffcc00); }
+.grupo-cleo #cleo4:checked ~ .display-muñeca > .prenda4 { opacity: 1; z-index: 10; filter: drop-shadow(0 0 12px var(--rosa-brillante)); }
 
 
-/*3. CONFIGURACIÓN BASE DE LAS PRENDAS
-=*/
-/* Por defecto, la prenda 1 INICIA VISIBLE, mientras que las prendas 2, 3 y 4 inician ocultas */
+/* ===================================================
+   3. REGLAS BASE DE OPACIDAD Y RECTÁNGULOS
+====================================================== */
 .prenda1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: opacity 0.4s ease-in-out;
-    opacity: 1;
-    /* ¡CLAVE! Se muestra de primeras sin necesidad de cuerpo base */
-    z-index: 5;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1; /* Inicia pintada de primeras automáticamente */
+  z-index: 5;
 }
 
-.prenda2,
-.prenda3,
-.prenda4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: opacity 0.4s ease-in-out;
-    opacity: 0;
-    /* Ocultas por defecto */
-    z-index: 1;
+.prenda2, .prenda3, .prenda4 {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;
+  transition: opacity 0.4s ease-in-out;
+  opacity: 0; /* Ocultas por defecto */
+  z-index: 1;
 }
 
 
-/*4. ANIMACIÓN DE DESTELLOS PARA LOS CLICKS
-*/
+/* ===================================================
+   4. ANIMACIÓN DE DESTELLOS CRUCIALES
+====================================================== */
 .efecto-destello-click {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: 20;
-    pointer-events: none;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: transparent; z-index: 20; pointer-events: none; 
 }
-
-/* --- Destellos para Draculaura --- */
-#outfit1:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoRosa 0.4s ease-out;
-}
-
-#outfit2:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoAzul 0.4s ease-out;
-}
-
-#outfit3:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoMorado 0.4s ease-out;
-}
-
-#outfit4:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoRosa 0.4s ease-out;
-}
-
-/* --- Destellos para Clawdeen --- */
-#clawdeen1:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoRosa 0.4s ease-out;
-}
-
-#clawdeen2:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoAzul 0.4s ease-out;
-}
-
-#clawdeen3:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoMorado 0.4s ease-out;
-}
-
-#clawdeen4:checked~.display-muñeca>.efecto-destello-click {
-    animation: destelloPulsoRosa 0.4s ease-out;
-}
+input[id$="1"]:checked ~ .display-muñeca > .efecto-destello-click { animation: destelloPulsoRosa 0.4s ease-out; }
+input[id$="2"]:checked ~ .display-muñeca > .efecto-destello-click { animation: destelloPulsoAzul 0.4s ease-out; }
+input[id$="3"]:checked ~ .display-muñeca > .efecto-destello-click { animation: destelloPulsoMorado 0.4s ease-out; }
+input[id$="4"]:checked ~ .display-muñeca > .efecto-destello-click { animation: destelloPulsoRosa 0.4s ease-out; }
 
 /* 3. CAJAS DE INFORMACIÓN TIPO PERIÓDICO MURAL */
 .caja-diario-gotica {
