@@ -1,64 +1,21 @@
-
-h1{
-    color: aliceblue;
-    font-size: 70px;
-    font-family: fantasy;
-    text-shadow: 5px 5px 6px rgb(155, 23, 115);
-    margin: 0;
-}
-
 body {
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: url("../Resources/FondoPrincipal.jpg");
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
 }
 
-.botones{
-  position: relative;
-  width: 100vw;
-  height: 100px;
-  margin-top: 180px;
-  text-align: center;
-
-}
-
-
-.opcion-menu{
-  display: inline-block;
-  background-color: rgb(77, 211, 252);
-  color: aliceblue;
-  text-decoration: none;
-  padding: 12px 25px;
-  font-family: fantasy;
-  text-shadow:
-    -1px -1px 0 rgb(214, 0, 143),
-     1px -1px 0 rgb(214, 0, 143),
-    -1px  1px 0 rgb(214, 0, 143),
-     1px  1px 0 rgb(214, 0, 143);
-  font-size: 20px;
-  border: 2px dashed black;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 1);
-  margin: 0 15px;
-}
-
-.opcion-menu:hover {
-  background-color: rgb(214, 0, 143);
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgb(214, 0, 143);
-}
-
-.contenido img{
+.contenido img {
   width: 90%;
   height: auto;
   display: block;
   margin: 0 auto;
-
 }
-.contenido{
+
+.contenido {
   position: relative;
   top: 0px;
   width: 70%;
@@ -66,41 +23,42 @@ body {
   right: 0;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 50px;
 }
 
 .contenido img.gif-bienvenida {
   position: absolute;
   width: 400px;
   height: auto;
-  top: 100px;
+  top: 80px;
   left: 200px;
   border: 3px dashed black;
   box-shadow: 3px 3px 8px rgba(83, 0, 116, 0.6);
-  }
+}
 
 .contenido .descripcion {
   position: absolute;
-  bottom: 970px;
+  bottom: 1040px;
   left: 15%;
   display: block;
   background-color: rgba(254, 252, 255, 1);
   border-radius: 20px;
-  border: 2px dashed black ;
+  border: 2px dashed black;
   box-shadow: 3px 3px 8px rgba(83, 0, 116, 0.6);
   color: rgb(0, 0, 0);
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   text-align: center;
   max-width: 500px;
   margin: 20px auto;
- }
+}
 
- .contenido .descripcion:hover {
-   transform: scale(1.1);
-   box-shadow: 0 0 10px rgb(214, 0, 143);
-  }
+.contenido .descripcion:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(214, 0, 143);
+}
 
-  .contenido img.twitter {
+.contenido img.twitter {
   position: absolute;
   width: 370px;
   height: auto;
@@ -108,11 +66,11 @@ body {
   left: 800px;
   border: 3px dashed black;
   box-shadow: 3px 3px 8px rgba(83, 0, 116, 0.6);
-  }
+}
 
-  .contenido .tritter{
+.contenido .tritter {
   position: absolute;
-  top: 880px;     
+  top: 880px;
   left: 818px;
   background-color: rgba(77, 211, 252);
   border-radius: 10px;
@@ -125,21 +83,20 @@ body {
   text-shadow:
     -1px -1px 0 rgb(214, 0, 143),
     1px -1px 0 rgb(214, 0, 143),
-    -1px  1px 0 rgb(214, 0, 143),
-    1px  1px 0 rgb(214, 0, 143); 
+    -1px 1px 0 rgb(214, 0, 143),
+    1px 1px 0 rgb(214, 0, 143);
   color: rgb(255, 255, 255);
   font-size: 20px;
- }
+}
 
 .contenido .tritter:hover {
-  background-color: rgb(214, 0, 143);
   transform: scale(1.1);
   box-shadow: 0 0 10px rgb(214, 0, 143);
 }
 
-.contenido .text-casillero{
+.contenido .text-casillero {
   position: absolute;
-  top: 1450px;     
+  top: 1450px;
   left: 818px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -151,7 +108,7 @@ body {
   font-family: 'Times New Roman', Times, serif;
   color: rgb(0, 0, 0);
   font-size: 20px;
- }
+}
 
 .contenido .casilleros {
   position: absolute;
@@ -166,7 +123,7 @@ body {
   left: 0;
   width: 100%;
   height: auto;
-  transition: opacity 0.4s;
+  transition: opacity 0s;
 }
 
 .contenido .casillero-abierto {
@@ -182,5 +139,3 @@ body {
   opacity: 1;
   filter: drop-shadow(0 0 10px rgb(212, 255, 219));
 }
-
-
