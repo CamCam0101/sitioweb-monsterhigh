@@ -35,7 +35,7 @@ body {
 
 .marco-video-freak {
   position: relative;
-  background-color: var(--azul-neon);
+  background-color: var(--blanco);
   padding: 15px 15px 25px 15px;
   border: 4px solid var(--gris-borde);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
