@@ -254,6 +254,24 @@ body {
     margin-right: 100px;
     font-size: large;
 }
+
+.decoraciones-revistas {
+    position: absolute;
+    right: 100px;
+    bottom: -1800px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    z-index: 10;
+}
+
+.img-lat {
+    width: 250px;
+    height: auto;
+    border: 2px solid var(--blanco);
+    rotate: -10deg;
+    animation: flotar 3s ease-in-out infinite;
+}
     
 
 @keyframes flotar {

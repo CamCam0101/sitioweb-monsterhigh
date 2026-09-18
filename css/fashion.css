@@ -58,7 +58,6 @@ body {
     animation: flotar 3s ease-in-out infinite;
 }
 
-/* ENCABEZADO UNIFICADO COMPACTO */
 .header-principal {
     background: linear-gradient(45deg, var(--morado-gótico), #000000);
     border-bottom: 4px solid var(--rosa-brillante);
@@ -103,7 +102,6 @@ body {
     color: #ffffff;
 }
 
-/* PANTALLA PRINCIPAL DE JUEGO */
 .marco-pantalla-juego {
     margin: 25px auto;
     padding: 15px;
@@ -117,11 +115,6 @@ body {
     display: block;
 }
 
-/* ===================================================
-   CUADRO INTRODUCTORIO CON CLASE ÚNICA Y ANIMACIÓN
-====================================================== */
-
-/* El recuadro blanco principal */
 .cuadro-introduccion-closet {
     background-image: url(../Fondos/cremallera.jpg);
     background-size: 100%;
@@ -138,7 +131,6 @@ body {
 
 }
 
-/* Da órdenes automáticas al h2 que esté adentro del cuadro */
 .cuadro-introduccion-closet h2 {
     color: var(--rosa-brillante);
     font-size: 1.3rem;
