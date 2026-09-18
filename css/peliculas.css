@@ -1,16 +1,17 @@
-:root{
+:root {
     --rosa-brillante: #ff007f;
-  --morado-oscuro: #511a7e;
-  --azul-neon: #41e6ff;
-  --blanco: #ffffff;
+    --morado-oscuro: #511a7e;
+    --azul-neon: #41e6ff;
+    --blanco: #ffffff;
 }
 
-body{
+body {
     background-image: url(../Fondos/chicas.jpg);
     background-size: 50%;
     background-attachment: fixed;
 }
-.fondo{
+
+.fondo {
     display: flex;
     flex-direction: column;
     max-width: 800px;
@@ -22,28 +23,8 @@ body{
     gap: 20px;
     padding: 30px;
 }
-.informacion{
-    text-align:left;
-    flex: 1;
-    margin-right: 30px;
-    padding: 3px 10px 10px 30px;
-    background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
-    background-size: 200%;
-    border: 3px dashed var(--rosa-brillante);
-    border-radius: 10px;
-    h2{
-    color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    }
-    p{
-    color: #ff007f;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    flex: 1;
-    min-width: 250px;
-    }
-}
-.imagenes-pelicula{
+
+.imagenes-pelicula {
     display: flex;
     grid-template-columns: 100px auto 1fr;
     padding: 15px 0;
@@ -52,22 +33,23 @@ body{
     padding-right: 15px;
 }
 
-.imagen-lat{
+.imagen-lat {
     width: 150px;
     height: auto;
     object-fit: cover;
     flex-shrink: 0;
-    border: 5px solid #ff007f;
+    border: 5px solid var(--rosa-brillante);
     border-radius: 10px;
 }
 
-.imagen-lat:hover{
-   transform: translateY(-5px);
-   border-color: var(--azul-neon);
+.imagen-lat:hover {
+    transform: translateY(-5px);
+    border: 3px solid var(--azul-neon);
+    filter: drop-shadow(0 0 15px var(--blanco));
 }
 
-.contenido-texto{
-    text-align:left;
+.contenido-texto {
+    text-align: left;
     flex: 1;
     margin: 10px;
     padding: 5px 10px 30px 30px;
@@ -75,17 +57,22 @@ body{
     background-size: 200%;
     border: 3px dashed var(--rosa-brillante);
     border-radius: 10px;
-    h2{
-    color: rgb(255, 255, 255);
+    color: var(--blanco);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     flex: 1;
     min-width: 200px;
-    }
-    p{
+}
+
+h2 {
+    color: var(--blanco);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1;
+    min-width: 200px;
+}
+
+p {
     color: var(--azul-neon);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     flex: 1;
     min-width: 250px;
-    }
-    
 }
