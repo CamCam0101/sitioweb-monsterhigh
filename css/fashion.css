@@ -26,7 +26,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: row;
-    bottom: 20px;
+    bottom: -1500px;
     right: 30px;
     filter: drop-shadow(0 0 15px var(--blanco));
     animation: flotar 3s ease-in-out infinite;
