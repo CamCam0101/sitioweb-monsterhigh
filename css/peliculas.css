@@ -66,10 +66,11 @@ body {
   border: 2px solid #000;
 }
 
-.caja-invitacion-blanca {
+.caja-invitacion {
   background-color: #ffffff;
   border: 3px dashed #000000;
   padding: 25px 20px;
+  margin-top: -200px;
   border-radius: 4px;
   flex: 1;                          
   box-shadow: 4px 4px 0px var(--rosa-brillante);
@@ -93,7 +94,7 @@ body {
   margin: 0;
 }
 
-.bloque-introduccion-peliculas {
+.bloque-peliculas {
   background-color: rgba(26, 26, 26, 0.5);
   border-left: 5px solid var(--azul-neon);
   padding: 20px;

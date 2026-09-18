@@ -149,12 +149,10 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* OCULTAR INPUTS */
 input[type="radio"] {
     display: none;
 }
 
-/* DISTRIBUCIÓN ESTILO DIARIO ASIMÉTRICO */
 .interfaz-closet {
     display: flex;
     justify-content: flex-start;
@@ -164,7 +162,6 @@ input[type="radio"] {
     margin-top: 20px;
 }
 
-/* 1. DISPLAY DE LA MUÑECA LIBRE (Sustituido el maniquí por la muñeca) */
 .display-muñeca {
     position: relative;
     width: 320px;
@@ -175,7 +172,6 @@ input[type="radio"] {
     overflow: visible;
     flex-shrink: 0;
     margin-left: -70px;
-    /* Desborde hacia la izquierda fuera del recuadro */
 }
 
 .capa-personaje {
@@ -225,7 +221,6 @@ input[type="radio"] {
     flex-wrap: wrap;
 }
 
-/* DISEÑO DE BOTONES CON LOS MOÑITOS RESTAURADOS */
 .boton-skull {
     background-color: #1a1a1a;
     border: 2px solid var(--gris-borde);
@@ -260,13 +255,9 @@ input[type="radio"] {
     filter: grayscale(0%);
 }
 
-/*LÓGICA E INDICADORES DE ACTIVACIÓN (:checked)
-=*/
 /* ===================================================
    1. ILUMINACIÓN INDEPENDIENTE DE BOTONES SKULL
 ====================================================== */
-
-/* --- Iluminación Botón 1 (Básico) --- */
 #drac1:checked~.bloque-central-informacion #btn-drac1,
 #claw1:checked~.bloque-central-informacion #btn-claw1,
 #frank1:checked~.bloque-central-informacion #btn-frank1,
@@ -277,7 +268,7 @@ input[type="radio"] {
     box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
 }
 
-/* --- Iluminación Botón 2 (Haunted) --- */
+
 #drac2:checked~.bloque-central-informacion #btn-drac2,
 #claw2:checked~.bloque-central-informacion #btn-claw2,
 #frank2:checked~.bloque-central-informacion #btn-frank2,
@@ -288,7 +279,6 @@ input[type="radio"] {
     box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
 }
 
-/* --- Iluminación Botón 3 (Scarrier) --- */
 #drac3:checked~.bloque-central-informacion #btn-drac3,
 #claw3:checked~.bloque-central-informacion #btn-claw3,
 #frank3:checked~.bloque-central-informacion #btn-frank3,
@@ -299,7 +289,6 @@ input[type="radio"] {
     box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
 }
 
-/* --- Iluminación Botón 4 (Gloom) --- */
 #drac4:checked~.bloque-central-informacion #btn-drac4,
 #claw4:checked~.bloque-central-informacion #btn-claw4,
 #frank4:checked~.bloque-central-informacion #btn-frank4,
@@ -444,10 +433,6 @@ input[type="radio"]:checked~.bloque-central-informacion .boton-skull .viñeta-mo
     filter: drop-shadow(0 0 12px var(--rosa-brillante));
 }
 
-
-/* ===================================================
-   3. REGLAS BASE DE OPACIDAD Y RECTÁNGULOS
-====================================================== */
 .prenda1 {
     position: absolute;
     top: 0;
@@ -457,7 +442,6 @@ input[type="radio"]:checked~.bloque-central-informacion .boton-skull .viñeta-mo
     object-fit: contain;
     transition: opacity 0.4s ease-in-out;
     opacity: 1;
-    /* Inicia pintada de primeras automáticamente */
     z-index: 5;
 }
 
@@ -472,7 +456,6 @@ input[type="radio"]:checked~.bloque-central-informacion .boton-skull .viñeta-mo
     object-fit: contain;
     transition: opacity 0.4s ease-in-out;
     opacity: 0;
-    /* Ocultas por defecto */
     z-index: 1;
 }
 
@@ -507,7 +490,6 @@ input[id$="4"]:checked~.display-muñeca>.efecto-destello-click {
     animation: destelloPulsoRosa 0.4s ease-out;
 }
 
-/* 3. CAJAS DE INFORMACIÓN TIPO PERIÓDICO MURAL */
 .caja-diario-gotica {
     background-color: #111111;
     border: 3px solid var(--gris-borde);
