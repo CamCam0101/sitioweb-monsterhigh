@@ -165,3 +165,35 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgb(2, 196, 255);
 }
+
+.tarjeta-generacion h4 {
+  background-color: rgba(2, 2, 2);
+  border: 2px dashed rgb(221, 0, 129);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow:
+    -1px -1px 0 rgb(214, 0, 143),
+    1px -1px 0 rgb(214, 0, 143),
+    -1px 1px 0 rgb(214, 0, 143),
+    1px 1px 0 rgb(214, 0, 143);
+  margin: 20;
+}
+
+.tarjeta-generacion h5 {
+  background-color: rgba(2, 2, 2);
+  border: 2px dashed rgb(221, 0, 129);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  color: aliceblue;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow:
+    -1px -1px 0 rgb(214, 0, 143),
+    1px -1px 0 rgb(214, 0, 143),
+    -1px 1px 0 rgb(214, 0, 143),
+    1px 1px 0 rgb(214, 0, 143);
+  margin: 20;
+}
