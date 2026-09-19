@@ -1,0 +1,132 @@
+.contenido img.imagen-celu {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top: 80px;
+  left: 800px;
+  animation-name: vibrar;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: transform 0.3s;
+}
+
+@keyframes vibrar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(10deg);
+  }
+  50%{
+    transform: rotate(0deg);
+  }
+  75%{
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.contenido img.imagen-celu:hover {
+  animation-play-state: none;
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgb(245, 208, 233));
+}
+
+.toggle-celular {
+  display: none;  
+}
+
+.menu-celular {
+  display: none;  
+  position: absolute;
+  top: 500px;
+  left: 1100px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-celular .opcion-celu  {
+  display: block;
+  color: aliceblue;
+  text-decoration: none;
+  font-family: fantasy;
+  background-color: rgb(77, 211, 252);
+  border: 2px dashed black;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
+  text-shadow:
+    -1px -1px 0 rgb(214, 0, 143),
+     1px -1px 0 rgb(214, 0, 143),
+    -1px  1px 0 rgb(214, 0, 143),
+     1px  1px 0 rgb(214, 0, 143);
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.menu-celular .opcion-celu:hover {
+  background-color: rgb(214, 0, 143);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(214, 0, 143);
+}
+
+.toggle-celular:checked ~ .menu-celular {
+  display: flex;
+}
+
+.toggle-celular:checked ~ label .imagen-celu {
+  animation-play-state: paused;
+ }
+
+ .contenido .medidor {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: 620px;
+  left: 150px;
+  filter: drop-shadow(3px 3px 8px rgba(227, 189, 241, 0.6));
+
+  animation-name: mezclar;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  
+}
+  
+
+@keyframes mezclar {
+  0% {
+    transform: translateY(0);
+  }
+  5%{
+    transform: translateY(20px);
+  }
+  10%{
+    transform: translateY(0px);
+  }
+  15%{
+    transform: translateY(20px);
+  }
+  20%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(0d);
+  }
+  75%{
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+ .contenido .medidor:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgb(212, 255, 219));
+  }
