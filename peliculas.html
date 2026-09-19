@@ -5,28 +5,28 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Monster High - Cine de calidad</title>
+   <link rel="stylesheet" href="css/interfazigual.css">
    <link rel="stylesheet" href="css/peliculas.css">
-   <link rel="stylesheet" href="css/menu_nav.css">
 
 </head>
 
 <body>
-   <header class="encabezado-fijo">
-      <div class="logo">
-         <img src="png_s/Monster_High_letras.png" alt="">
-      </div>
-       <nav class="menu-navegacion">
-        <a href="index.html" class="enlace-menu">Inicio</a>
-        <a href="peliculas.html" class="enlace-menu">Películas</a>
-        <a href="clases.html" class="enlace-menu">Clases Monstruosas</a>
-        <a href="muñecas.html" class="enlace-menu">Muñecas</a>
-        <a href="fashion.html" class="enlace-menu">fashionista</a>
-    </nav>
+   <header>
+      <a href="index.html">
+         <img src="Resources/LogoMHpng.png" alt="Logo Monster High" class="logo">
+      </a>
+      <img src="Resources/Titulo.png" alt="Titulo Monster High" class="titulo">
    </header>
 
-  
+   <main class="botones">
+      <a href="estudiantes.html" class="opcion-menu op1">ESTUDIANTES</a>
+      <a href="peliculas.html" class="opcion-menu op2">PELICULAS</a>
+      <a href="muñecas.html" class="opcion-menu op3">MUÑECAS</a>
+      <a href="fashion.html" class="opcion-menu op4">FASHION</a>
+      <a href="escuela.html" class="opcion-menu op5">ESCUELA</a>
+   </main>
 
-   <div class="fondo">
+   <main class="fondo">
 
       <section class="seccion-reproductor-retro">
 
@@ -43,21 +43,23 @@
                <source src="Resources/videos/v3.mp4" type="video/mp4">
             </video>
          </div>
+         <div class="columna-derecha">
+            <aside class="caja-invitacion">
+               <h3 class="titulo-invitacion">¿QUIERES ENTRETENERTE UN RATO?</h3>
+               <p class="texto-invitacion">Mira algunos vídeos de tus chicas favoritas en nuestro peqqueño album de
+                  fotos
+                  ¡Si quieres seguir viendo puedes visitar el sitio oficial de monster-high Latinoamerica en youtube!
+               </p>
+            </aside>
 
-         <!-- Caja de Texto Blanca al lado con Borde Dashed Negro -->
-         <aside class="caja-invitacion">
-            <h3 class="titulo-invitacion">¿QUIERES ENTRETENERTE UN RATO?</h3>
-            <p class="texto-invitacion">Mira algunos vídeos de tus chicas favoritas en nuestro peqqueño album de fotos
-               ¡Si quieres seguir viendo puedes visitar el sitio oficial de monster-high Latinoamerica en youtube!
-            </p>
-         </aside>
-      
+            <img src="png_s/bandera.png" alt="bandera" class="imagen-bandera">
+         </div>
       </section>
 
       <section class="bloque-peliculas">
-         <h2 class="titulo-introduccion">🍿 Archivos Cinematográficos</h2>
+         <h2 class="titulo-introduccion">🍿 Archivos Del cine glamouroso</h2>
          <p class="parrafo-introduccion">
-            ¡Prepara tus palomitas monstruosas! A continuación, te presentamos una recopilación exclusiva de las
+            ¡Prepara tus palomitas ! A continuación, te presentamos una recopilación exclusiva de las
             películas más icónicas de las estudiantes de Monster High. Desde misterios antiguos en las pirámides de
             Egipto hasta aventuras electrizantes bajo el mar, explora los diarios de rodaje y los looks cinematográficos
             que marcaron historia en el instituto.
@@ -73,6 +75,7 @@
             <h2>Why do Ghouls fall in love?</h2>
             <p>(Amor Monstruoso o Un romance monstruoso)</p>
          </div>
+         
       </div>
 
       <div class="imagenes-pelicula">
@@ -158,10 +161,39 @@
          <h2 class="titulo-introduccion">Menciones horroríficas</h2>
          <p class="parrafo-introduccion">Si bien la G1 en 3D tiene las premisas más icónicas de la farandula,
             hay sin duda otras películas que hay que mencionar.
-            Entre ellas dos live actions siendo los mal recientes
+            Entre ellas dos live actions siendo los mas recientes. Dicho eso, no son muy "aclamados"
+            por los fans...
          </p>
       </div>
+
+      <div class="bloque-peliculas">
+         <h1 class="parrafo-introduccion">
+            Aun asi ¡Queremos recordar unas de las fantasmagóricas celebridades que conocieron nuestras
+            chicas! ¿Las reconoces?
+         </h1>
+      </div>
+
+      <div class="manojo">
+         <img src="Personajes_imgs/elissabat-v.jpg" alt="elissabat" class="carta c1">
+         <img src="Personajes_imgs/catty.jpg" alt="catty" class="carta c2">
+         <img src="Personajes_imgs/cupido.jpg" alt="cupido" class="carta c3">
+      </div>
    </div>
+
+   <div class="asistente-web">
+
+      <div class="burbuja-asistente">
+         <h4 class="titulo-asistente">DRAC DICE:</h4>
+         <p class="texto-asistente">¡Psst! ¿Te cuento algo? Sabias que iban a hacer un crossover entre nuestro universo
+            y el de "Ever after high?".</p>
+      </div>
+      <img src="png_s/chibi.png" alt="Asistente" class="icono-asistente">
+   </main>
+
+   <footer>
+      <p>©2026 Monster High School. Todos los derechos reservados.</p>
+   </footer>
+
 </body>
 
 </html>
