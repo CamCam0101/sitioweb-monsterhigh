@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url(../Fondos/chicas.jpg);
+  background-image: url(../Resources/Fondos/chicas.jpg);
   background-size: 50%;
   background-attachment: fixed;
 }
@@ -17,7 +17,7 @@ body {
   max-width: 800px;
   width: 95%;
   margin: 60px auto;
-  background-image: url(../Fondos/flores.jpg);
+  background-image: url(../Resources/Fondos/flores.jpg);
   width: 100%;
   border-radius: 10px;
   gap: 20px;
@@ -162,7 +162,7 @@ body {
   flex: 1;
   margin: 10px;
   padding: 5px 10px 30px 30px;
-  background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+  background-image: url(../Resources/Fondos/Monster\ High\ Wallpaper.jpg);
   background-size: 200%;
   border: 3px dashed var(--rosa-brillante);
   border-radius: 10px;
