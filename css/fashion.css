@@ -1,0 +1,569 @@
+:root {
+    --rosa-brillante: #ff007f;
+    --morado-gótico: #7a35b2;
+    --azul-haunted: #00d2ff;
+    --blanco: #ffff;
+    --negro-grunge: #0d0d0d;
+    --gris-borde: #222222;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: fr;
+    background-image: url(../Fondos/city.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+
+.decoracion-matraz {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: -1500px;
+    right: 30px;
+    filter: drop-shadow(0 0 15px var(--blanco));
+    animation: flotar 3s ease-in-out infinite;
+    z-index: 100;
+}
+
+.decoracion-matraz img {
+    width: 210px;
+    height: auto;
+    transform: rotate(20deg);
+}
+
+.decoraciones-revistas {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+    z-index: 10;
+}
+
+.img-lat {
+    width: 160px;
+    height: auto;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+    border: 2px solid var(--blanco);
+    rotate: -10deg;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.logo-centro {
+    width: 60%;
+    max-width: 380px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.eslogan {
+    margin: 0px;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.marco-pantalla-juego {
+    margin: 25px auto;
+    padding: 15px;
+    background-image: url(../Fondos/calavera.jpg);
+    background-size: contain;
+    position: relative;
+    max-width: 950px;
+
+    box-shadow: inset 0 0 20px var(--morado-gótico), 0 0 15px #000000;
+    border-radius: 4px;
+    display: block;
+}
+
+.cuadro-introduccion-closet {
+    background-image: url(../Fondos/cremallera.jpg);
+    background-size: 100%;
+    width: 90%;
+    padding: 20px 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    background-color: rgba(42, 8, 69, 0.4);
+    border: 3px dashed var(--rosa-brillante);
+    filter: drop-shadow(0 0 10px var(--azul-haunted));
+    text-align: center;
+    animation: flotar 3s ease-in-out infinite;
+
+
+}
+
+.cuadro-introduccion-closet h2 {
+    color: var(--rosa-brillante);
+    text-shadow:
+        -1px -1px 0 var(--negro-grunge),
+        1px -1px 0 var(--negro-grunge),
+        -1px 1px 0 var(--negro-grunge),
+        1px 1px 0 var(--negro-grunge);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.cuadro-introduccion-closet p {
+    color: var(--blanco);
+    font-family: fr;
+    text-shadow:
+        -1px -1px 0 rgb(214, 0, 143),
+        1px -1px 0 rgb(214, 0, 143),
+        -1px 1px 0 rgb(214, 0, 143),
+        1px 1px 0 rgb(214, 0, 143);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.interfaz-closet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.display-muñeca {
+    position: relative;
+    width: 320px;
+    height: 520px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+    flex-shrink: 0;
+    margin-left: -70px;
+}
+
+.capa-personaje {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+
+/* 2. COLUMNA CENTRAL DE CONTENIDO */
+.bloque-central-informacion {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perchero-central {
+    background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+    background-size: 200%;
+    border: 2px dashed var(--rosa-brillante);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-perchero {
+    color: var(--negro-grunge);
+    background-color: var(--blanco);
+    background-size: 200%;
+    border: 3px dashed var(--rosa-brillante);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 5px 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.rejilla-botones-horizontales {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.boton-skull {
+    background-color: #1a1a1a;
+    border: 2px solid var(--gris-borde);
+    color: #bbbbbb;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.viñeta-moño {
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.texto-boton {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.boton-skull:hover {
+    background-color: #214250;
+    color: #fff;
+    border-color: var(--rosa-brillante);
+}
+
+.boton-skull:hover .viñeta-moño {
+    filter: grayscale(0%);
+}
+
+/* ===================================================
+   1. ILUMINACIÓN INDEPENDIENTE DE BOTONES SKULL
+====================================================== */
+#drac1:checked~.bloque-central-informacion #btn-drac1,
+#claw1:checked~.bloque-central-informacion #btn-claw1,
+#frank1:checked~.bloque-central-informacion #btn-frank1,
+#cleo1:checked~.bloque-central-informacion #btn-cleo1 {
+    background-color: var(--morado-gótico);
+    border-color: var(--rosa-brillante);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+
+#drac2:checked~.bloque-central-informacion #btn-drac2,
+#claw2:checked~.bloque-central-informacion #btn-claw2,
+#frank2:checked~.bloque-central-informacion #btn-frank2,
+#cleo2:checked~.bloque-central-informacion #btn-cleo2 {
+    background-color: #002b36;
+    border-color: var(--azul-haunted);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
+#drac3:checked~.bloque-central-informacion #btn-drac3,
+#claw3:checked~.bloque-central-informacion #btn-claw3,
+#frank3:checked~.bloque-central-informacion #btn-frank3,
+#cleo3:checked~.bloque-central-informacion #btn-cleo3 {
+    background-color: #0d2600;
+    border-color: var(--blanco);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+#drac4:checked~.bloque-central-informacion #btn-drac4,
+#claw4:checked~.bloque-central-informacion #btn-claw4,
+#frank4:checked~.bloque-central-informacion #btn-frank4,
+#cleo4:checked~.bloque-central-informacion #btn-cleo4 {
+    background-color: #450826;
+    border-color: var(--rosa-brillante);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.4);
+}
+
+/* Encender el color rosa del moño en los botones activos */
+input[type="radio"]:checked~.bloque-central-informacion .boton-skull .viñeta-moño {
+    filter: grayscale(0%);
+}
+
+
+/* ===================================================
+   2. CONTROL DE PRENDAS AISLADAS PARA CADA CHICA
+====================================================== */
+
+/* --- DRACULAURA (.grupo-drac) --- */
+.grupo-drac input[type="radio"]:checked~.display-muñeca>.prenda1 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+.grupo-drac #drac2:checked~.display-muñeca>.prenda1,
+.grupo-drac #drac3:checked~.display-muñeca>.prenda1,
+.grupo-drac #drac4:checked~.display-muñeca>.prenda1 {
+    opacity: 0;
+}
+
+.grupo-drac #drac2:checked~.display-muñeca>.prenda2 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--azul-haunted));
+}
+
+.grupo-drac #drac3:checked~.display-muñeca>.prenda3 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px #e76fbb);
+}
+
+.grupo-drac #drac4:checked~.display-muñeca>.prenda4 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+/* --- CLAWDEEN (.grupo-clawdeen) --- */
+.grupo-clawdeen input[type="radio"]:checked~.display-muñeca>.prenda1 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+.grupo-clawdeen #claw2:checked~.display-muñeca>.prenda1,
+.grupo-clawdeen #claw3:checked~.display-muñeca>.prenda1,
+.grupo-clawdeen #claw4:checked~.display-muñeca>.prenda1 {
+    opacity: 0;
+}
+
+.grupo-clawdeen #claw2:checked~.display-muñeca>.prenda2 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--azul-haunted));
+}
+
+.grupo-clawdeen #claw3:checked~.display-muñeca>.prenda3 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px #9b2bdd);
+}
+
+.grupo-clawdeen #claw4:checked~.display-muñeca>.prenda4 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+/* --- FRANKIE (.grupo-frankie) --- */
+.grupo-frankie input[type="radio"]:checked~.display-muñeca>.prenda1 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+.grupo-frankie #frank2:checked~.display-muñeca>.prenda1,
+.grupo-frankie #frank3:checked~.display-muñeca>.prenda1,
+.grupo-frankie #frank4:checked~.display-muñeca>.prenda1 {
+    opacity: 0;
+}
+
+.grupo-frankie #frank2:checked~.display-muñeca>.prenda2 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--azul-haunted));
+}
+
+.grupo-frankie #frank3:checked~.display-muñeca>.prenda3 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px #04c127);
+}
+
+.grupo-frankie #frank4:checked~.display-muñeca>.prenda4 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+/* --- CLEO DE NILE (.grupo-cleo) --- */
+.grupo-cleo input[type="radio"]:checked~.display-muñeca>.prenda1 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+.grupo-cleo #cleo2:checked~.display-muñeca>.prenda1,
+.grupo-cleo #cleo3:checked~.display-muñeca>.prenda1,
+.grupo-cleo #cleo4:checked~.display-muñeca>.prenda1 {
+    opacity: 0;
+}
+
+.grupo-cleo #cleo2:checked~.display-muñeca>.prenda2 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--azul-haunted));
+}
+
+.grupo-cleo #cleo3:checked~.display-muñeca>.prenda3 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px #ffcc00);
+}
+
+.grupo-cleo #cleo4:checked~.display-muñeca>.prenda4 {
+    opacity: 1;
+    z-index: 10;
+    filter: drop-shadow(0 0 12px var(--rosa-brillante));
+}
+
+.prenda1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+    z-index: 5;
+}
+
+.prenda2,
+.prenda3,
+.prenda4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+
+/* ===================================================
+   4. ANIMACIÓN DE DESTELLOS
+====================================================== */
+.efecto-destello-click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 20;
+    pointer-events: none;
+}
+
+input[id$="1"]:checked~.display-muñeca>.efecto-destello-click {
+    animation: destelloPulsoRosa 0.4s ease-out;
+}
+
+input[id$="2"]:checked~.display-muñeca>.efecto-destello-click {
+    animation: destelloPulsoAzul 0.4s ease-out;
+}
+
+input[id$="3"]:checked~.display-muñeca>.efecto-destello-click {
+    animation: destelloPulsoMorado 0.4s ease-out;
+}
+
+input[id$="4"]:checked~.display-muñeca>.efecto-destello-click {
+    animation: destelloPulsoRosa 0.4s ease-out;
+}
+
+.caja-diario-gotica {
+    background-color: #111111;
+    border: 3px solid var(--gris-borde);
+    padding: 0 0 15px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 0px var(--azul-haunted);
+}
+
+.etiqueta-rosa {
+    background-color: var(--rosa-brillante);
+    border: 3px solid var(--azul-haunted);
+    color: #000000;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 0 12px 0;
+    padding: 8px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: skewX(-10deg);
+    margin-left: -5px;
+}
+
+.texto-diario {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #cccccc;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.divisor {
+    height: 4px;
+    background: repeating-radial-gradient(90deg, var(--rosa-brillante), var(--morado-gótico) 10px, transparent 20px);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes destelloPulsoRosa {
+    0% {
+        background-color: rgba(255, 0, 127, 0.6);
+        box-shadow: inset 0 0 30px var(--rosa-brillante);
+    }
+
+    100% {
+        background-color: transparent;
+        box-shadow: inset 0 0 0px transparent;
+    }
+}
+
+@keyframes destelloPulsoAzul {
+    0% {
+        background-color: rgba(0, 210, 255, 0.6);
+        box-shadow: inset 0 0 30px var(--azul-haunted);
+    }
+
+    100% {
+        background-color: transparent;
+        box-shadow: inset 0 0 0px transparent;
+    }
+}
+
+@keyframes destelloPulsoMorado {
+    0% {
+        background-color: rgba(114, 56, 248, 0.6);
+        box-shadow: inset 0 0 30px var(--morado-gótico);
+    }
+
+    100% {
+        background-color: transparent;
+        box-shadow: inset 0 0 0px transparent;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .decoracion-matraz,
+    .decoraciones-revistas {
+        display: none;
+    }
+}

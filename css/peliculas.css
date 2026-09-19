@@ -1,0 +1,310 @@
+:root {
+  --rosa-brillante: #ff007f;
+  --morado-oscuro: #511a7e;
+  --azul-neon: #41e6ff;
+  --blanco: #ffffff;
+}
+
+body {
+  background-image: url(../Fondos/chicas.jpg);
+  background-size: 50%;
+  background-attachment: fixed;
+}
+
+.fondo {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 95%;
+  margin: 60px auto;
+  background-image: url(../Fondos/flores.jpg);
+  width: 100%;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 30px;
+}
+
+.seccion-reproductor-retro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.marco-video-freak {
+  position: relative;
+  background-color: var(--blanco);
+  padding: 15px 15px 25px 15px;
+  border: 4px solid var(--gris-borde);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  flex: 1.3;
+  transform: rotate(-2deg);
+}
+
+.etiqueta-reproductor {
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  background-color: var(--azul-neon);
+  color: var(--blanco);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: rotate(-2deg);
+  border: 2px solid #000;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.video-youtube {
+  width: 100%;
+  height: 280px;
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.caja-invitacion {
+  background-color: #ffffff;
+  border: 3px dashed #000000;
+  padding: 25px 20px;
+  margin-top: -200px;
+  border-radius: 4px;
+  flex: 1;
+  box-shadow: 4px 4px 0px var(--rosa-brillante);
+}
+
+.titulo-invitacion {
+  color: #000000;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  border-bottom: 2px dashed #000000;
+  padding-bottom: 5px;
+}
+
+.texto-invitacion {
+  color: var(--rosa-brillante);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 0;
+}
+
+.columna-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  flex: 1;
+}
+
+.imagen-bandera {
+  max-width: 350px;
+  height: auto;
+  margin-top: 20px;
+  align-self: flex-end;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.bloque-peliculas {
+  background-color: rgba(26, 26, 26, 0.5);
+  border-left: 5px solid var(--azul-neon);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 0 8px 8px 0;
+}
+
+.titulo-introduccion {
+  color: var(--azul-neon);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.parrafo-introduccion {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #dddddd;
+  margin: 0;
+}
+
+.imagenes-pelicula {
+  display: flex;
+  grid-template-columns: 100px auto 1fr;
+  padding: 15px 0;
+  margin: auto;
+  width: 100%;
+  padding-right: 15px;
+}
+
+.imagen-lat {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid var(--blanco);
+
+}
+
+.imagen-lat:hover {
+  transform: translateY(-5px);
+  border: 5px solid var(--azul-neon);
+  filter: drop-shadow(0 0 15px var(--blanco));
+}
+
+.contenido-texto {
+  text-align: left;
+  flex: 1;
+  margin: 10px;
+  padding: 5px 10px 30px 30px;
+  background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+  background-size: 200%;
+  border: 3px dashed var(--rosa-brillante);
+  border-radius: 10px;
+  color: var(--blanco);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  flex: 1;
+  min-width: 200px;
+}
+
+.contenido-texto h2 {
+  color: var(--blanco);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  flex: 1;
+  min-width: 200px;
+}
+
+.contenido-texto p {
+  color: var(--azul-neon);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  flex: 1;
+  min-width: 250px;
+}
+
+.manojo{
+  position: relative;
+  width: 180px;
+  height: 240px;
+  margin: 50px auto;
+  cursor: pointer;
+}
+
+.carta{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid var(--blanco);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.c1{
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+
+.c2{
+  transform: rotate(0deg);
+  z-index: 2;
+}
+
+.c3{
+  transform: rotate(6deg);
+  z-index: 3;
+}
+
+.manojo:hover .c1{
+  transform: translate(-90px, -30px) rotate(-18deg);
+}
+
+.manojo:hover .c2{
+  transform: translate(0px, -55px) rotate(0deg);
+}
+
+.manojo:hover .c3{
+  transform: translate(90px, -30px) rotate(18deg);
+}
+
+.asistente-web {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9999;
+}
+
+.icono-asistente {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--rosa-brillante, #ff007f);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.asistente-web:hover .icono-asistente {
+  transform: scale(1.08) rotate(5deg);
+}
+
+.burbuja-asistente {
+  position: absolute;
+  bottom: 115px;
+  width: 260px;
+  right: 0px;
+  background-color: var(--blanco, #ffffff);
+  border: 3px dashed #000000;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.4s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.titulo-asistente {
+  margin: 0 0 5px 0;
+  color: var(--rosa-brillante, #ff007f);
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.texto-asistente {
+  margin: 0;
+  font-size: 13px;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.asistente-web:hover .burbuja-asistente {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
