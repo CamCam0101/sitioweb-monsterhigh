@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     margin: 0;
     font-family: fr;
-    background-image: url(../Fondos/city.jpg);
+    background-image: url(../Resources/Fondos/city.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -75,7 +75,7 @@ body {
 .marco-pantalla-juego {
     margin: 25px auto;
     padding: 15px;
-    background-image: url(../Fondos/calavera.jpg);
+    background-image: url(../Resources/Fondos/calavera.jpg);
     background-size: contain;
     position: relative;
     max-width: 950px;
@@ -86,7 +86,7 @@ body {
 }
 
 .cuadro-introduccion-closet {
-    background-image: url(../Fondos/cremallera.jpg);
+    background-image: url(../Resources/Fondos/cremallera.jpg);
     background-size: 100%;
     width: 90%;
     padding: 20px 25px;
@@ -175,7 +175,7 @@ input[type="radio"] {
 }
 
 .perchero-central {
-    background-image: url(../Fondos/Monster\ High\ Wallpaper.jpg);
+    background-image: url(../Resources/Fondos/Monster\ High\ Wallpaper.jpg);
     background-size: 200%;
     border: 2px dashed var(--rosa-brillante);
     border-radius: 8px;
